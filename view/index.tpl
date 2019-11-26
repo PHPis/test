@@ -5,7 +5,7 @@
 {include file="header.tpl"}
 
 <body>
-    {include file=$file_name}
+    {block name="body"} {/block}
 </body>
 
 </html>

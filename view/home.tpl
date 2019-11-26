@@ -1,3 +1,6 @@
+{extends 'index.tpl'}
+
+{block name="body"}
 <div class="container-fluid home-content-wrapper">
     <div class="bg-pic-home"></div>
     <div class="bg-shadow-home"></div>
@@ -51,3 +54,4 @@
         </div>
     </div>
 </footer>
+{/block}

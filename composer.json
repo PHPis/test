@@ -1,0 +1,19 @@
+{
+    "name": "phpis/ermak-altair",
+    "require": {
+        "phroute/phroute": "^2.1",
+        "smarty/smarty": "~3.1",
+        "twbs/bootstrap":"4.3.1"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Controller\\": "controller/",
+            "Classes\\": "classes/"
+        },
+        "files": [
+        ]
+    },
+
+    "license": "mit"
+}

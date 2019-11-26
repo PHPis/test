@@ -1,0 +1,6 @@
+/config/
+composer.lock
+/vendor/
+/templates_c/
+/.idea/
+/mysql/

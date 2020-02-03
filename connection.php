@@ -5,7 +5,7 @@ $user = $_ENV["MYSQL_USER"];
 $password = $_ENV["MYSQL_PASSWORD"];
 
 try {
-    $dbh = new PDO($dsn, $user, $password);
+    $db = new PDO($dsn, $user, $password);
 } catch (PDOException $e) {
     die('Connection failed: ' . $e->getMessage());
 }

@@ -4,3 +4,4 @@ composer.lock
 /templates_c/
 /.idea/
 /mysql/
+view/templates_c/

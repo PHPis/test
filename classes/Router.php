@@ -1,6 +1,8 @@
 <?php
 namespace Classes;
 
+use controller\LoginController;
+
 class Router
 {
     public function run($request_uri)
@@ -14,13 +16,18 @@ class Router
             $arr_path = explode('->', $value);
             $controllerClass    = new $arr_path[0]();
             $func               = $arr_path[1];
-            if (isset($arr_path[2])) {
-                $controllerClass->$func($arr_path[2]);
-                die;
+
+            if (!in_array($arr_path[0], ['controller\RegistrationController', 'controller\LoginController']) ) {
+                $login = new LoginController();
+                if (!$login->checkAccess()) {
+                    header("HTTP/1.0 404 Not Found");
+                    die;
+                }
             }
             $controllerClass->$func();
             die;
         }
-        return "404 404";
+        header("HTTP/1.0 404 Not Found");
+        return;
     }
 }

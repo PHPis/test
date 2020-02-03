@@ -6,5 +6,5 @@ include __DIR__ . '/vendor/autoload.php';
 include __DIR__ . '/config/config.php';
 include __DIR__ . '/config/routing.php';
 
-//** раскомментируйте следующую строку для отображения отладочной консоли
-//$smarty->debugging = true;
+//** раскомментируй строку для отображения отладочной консоли
+$smarty->debugging = true;

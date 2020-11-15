@@ -37,12 +37,14 @@ services:
 
   mysql:
     image: mysql:8
-    container_name: lesson9-db
+    container_name: ermak-db
     ports:
         - "3306:3306"
     command: --default-authentication-plugin=mysql_native_password
     volumes:
-        - ./mysql:/var/lib/mysql
+      - ./mysql:/var/lib/mysql
+      - ./dbcreation.sql:/tmp/dbcreation.sql
+      - ./import.sh:/tmp/import.sh
     restart: always
     environment:
         MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD} 

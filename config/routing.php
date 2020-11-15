@@ -5,7 +5,11 @@ $route = [
     "#/profile#i" => "controller\\ProfileController->mainAction",
     "#/login#i" => "controller\\LoginController->loginAction",
     "#/logout#i" => "controller\\LoginController->logoutAction",
-    "#/$#i" => "controller\\RegistrationController->registrationAction",
+//    "#/$#i" => "controller\\RegistrationController->registrationAction",
+
+    "#/ermak#i" => "Controller\\Home->indexAction->ermak",
+    "#/bar#i" => "Controller\\Home->indexAction->bar",
+    "#/#i" => "controller\\Home->indexAction",
 ];
 $router = new classes\Router();
 $router->run($_SERVER["REQUEST_URI"]);

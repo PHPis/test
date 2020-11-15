@@ -7,4 +7,4 @@ include __DIR__ . '/config/config.php';
 include __DIR__ . '/config/routing.php';
 
 //** раскомментируй строку для отображения отладочной консоли
-$smarty->debugging = true;
+//$smarty->debugging = true;

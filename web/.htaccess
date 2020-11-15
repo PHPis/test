@@ -1,6 +1,6 @@
 RewriteEngine on
 
-RewriteBase /
+RewriteBase /web/
 RewriteCond %{HTTP_HOST} (.*)
 RewriteCond %{REQUEST_URI} /$ [NC]
 RewriteRule ^(.*)(/)$ $1 [L,R=301]

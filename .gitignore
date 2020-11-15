@@ -1,6 +1,6 @@
-composer.lock
-/vendor/
+web/composer.lock
+web/vendor/
 /templates_c/
 /.idea/
 /mysql/
-view/templates_c/
+web/view/templates_c/

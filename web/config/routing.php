@@ -9,7 +9,7 @@ $route = [
 
     "#/ermak#i" => "Controller\\Home->indexAction->ermak",
     "#/bar#i" => "Controller\\Home->indexAction->bar",
-    "#/#i" => "controller\\Home->indexAction",
+    "#/#i" => "Controller\\Home->indexAction",
 ];
 $router = new classes\Router();
 $router->run($_SERVER["REQUEST_URI"]);

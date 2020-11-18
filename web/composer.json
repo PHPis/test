@@ -8,9 +8,9 @@
 
     "autoload": {
         "psr-4": {
-            "controller\\": "controller/",
-            "model\\": "model/",
-            "classes\\": "classes/"
+            "Classes\\": "classes/",
+            "Controller\\": "controller/",
+            "Model\\": "model/"
         },
         "files": [
         ]

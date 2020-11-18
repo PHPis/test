@@ -1,5 +1,5 @@
 <?php
-namespace controller;
+namespace Controller;
 
 class Home
 {
@@ -14,14 +14,16 @@ class Home
         $sql = "SELECT * FROM cafe WHERE cafe_name='{$cafe}'";
         $result = $db->query($sql)->fetch();
 
-        $smarty->assign('cafe', $result['cafe_name']);
-        $smarty->assign('menu', $result['menu_dir']);
-        $smarty->assign('phone',$result['phone']);
-        $smarty->assign('address',$result['address']);
-        $smarty->assign('time_work',$result['time_work']);
-        $smarty->assign('instagram',$result['instagram']);
-        $smarty->assign('ok',$result['ok']);
-        $smarty->assign('file_name','home.tpl');
+        $smarty->assign([
+            'cafe' => $result['cafe_name'],
+            'menu' => $result['menu_dir'],
+            'phone' => $result['phone'],
+            'address' => $result['address'],
+            'time_work' => $result['time_work'],
+            'instagram' => $result['instagram'],
+            'ok' => $result['ok'],
+            'file_name' => 'home.tpl',
+        ]);
         $smarty->display('index.tpl');
     }
 

@@ -1,8 +1,6 @@
 <?php
 namespace Classes;
 
-use controller\LoginController;
-
 class Router
 {
     public function run($request_uri)

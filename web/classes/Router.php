@@ -5,10 +5,10 @@ class Router
 {
     public function run($request_uri)
     {
-        global $route;
+        global $route, $smarty;
 
         foreach ($route as $key => $value) {
-            if (!preg_match($key, $request_uri))
+            if (!stristr($key, $request_uri))
                 continue;
 
             $arr_path = explode('->', $value);
@@ -17,22 +17,13 @@ class Router
 
             if ($arr_path[2]??null) {
                 $controllerClass->$func($arr_path[2]);
-                die;
+                return;
             }
             $controllerClass->$func();
-            die;
-
-//            if (!in_array($arr_path[0], ['controller\RegistrationController', 'controller\LoginController']) ) {
-//                $login = new LoginController();
-//                if (!$login->checkAccess()) {
-//                    header("HTTP/1.0 404 Not Found");
-//                    die;
-//                }
-//            }
-//            $controllerClass->$func();
-//            die;
+            return;
         }
         header("HTTP/1.0 404 Not Found");
+        $smarty->display('404.tpl');
         return;
     }
 }

@@ -3,4 +3,4 @@ web/vendor/
 /templates_c/
 /.idea/
 /mysql/
-web/view/templates_c/
+web/templates/templates_c/

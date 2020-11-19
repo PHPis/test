@@ -4,8 +4,8 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 
 include __DIR__ . '/vendor/autoload.php';
-include __DIR__ . '/config/config.php';
 include __DIR__ . '/config/routing.php';
+include __DIR__ . '/config/config.php';
 
 //** раскомментируй строку для отображения отладочной консоли
 //$smarty->debugging = true;
